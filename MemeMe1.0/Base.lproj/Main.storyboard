@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Edit Meme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EditMemeViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-E8-TaR" userLabel="memeImageView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="Qb8-zr-ff6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -84,19 +84,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1834970534796424" green="0.1834970534796424" blue="0.1834970534796424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BX4-E8-TaR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="5lm-BI-WuI"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ie-v8-gfq"/>
-                            <constraint firstAttribute="trailing" secondItem="BX4-E8-TaR" secondAttribute="trailing" id="7qf-lN-KYk"/>
-                            <constraint firstItem="BX4-E8-TaR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8zS-fF-NVa"/>
-                            <constraint firstItem="BX4-E8-TaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fna-Hg-j2o"/>
                             <constraint firstItem="Jht-fw-cB5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GNo-7T-kCx"/>
                             <constraint firstItem="Qb8-zr-ff6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jkr-LP-lpl"/>
-                            <constraint firstItem="xo0-qW-8Ex" firstAttribute="top" secondItem="BX4-E8-TaR" secondAttribute="bottom" id="Onp-bo-YQs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BX4-E8-TaR" secondAttribute="bottom" constant="20" id="UmG-jy-v4P"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wxq-oG-cJN"/>
+                            <constraint firstItem="BX4-E8-TaR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dwS-PK-nbx"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nQo-Ww-NrC"/>
                             <constraint firstItem="h3v-bb-Qsq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oYE-8b-pZc"/>
                             <constraint firstItem="Qb8-zr-ff6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pKV-AQ-Fzc"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="top" secondItem="h3v-bb-Qsq" secondAttribute="bottom" constant="20" id="tUD-0d-RLW"/>
                             <constraint firstItem="Jht-fw-cB5" firstAttribute="top" secondItem="Qb8-zr-ff6" secondAttribute="bottom" constant="20" id="u70-1m-ZHy"/>
+                            <constraint firstItem="BX4-E8-TaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wR8-VF-Skb"/>
                             <constraint firstItem="Qb8-zr-ff6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zV9-Yx-xje"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate,
+class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate{
 
     
@@ -41,9 +41,10 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         super.viewDidLoad()
         
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        
-        setUIElemnt()
-        
+        memeImageView.image = nilImage
+        shareButton.isEnabled = false
+        prepareTextField(textField: topTextField, defaultText: "TOP")
+        prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
     }
     
     
@@ -109,24 +110,13 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     }
     
     
-    func setUIElemnt(){
-        
-        bottomTextField.text = "BOTTOM"
-        bottomTextField.textAlignment = .center
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.delegate = self
-        
-        topTextField.text = "TOP"
-        topTextField.textAlignment = .center
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.delegate = self
-        
-        memeImageView.image = nilImage
-        shareButton.isEnabled = false
-        
+    func prepareTextField(textField: UITextField, defaultText: String) {
+        textField.text = defaultText
+        textField.textAlignment = .center
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.delegate = self
         
     }
-
     
     func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
       {
@@ -153,7 +143,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
        
         shareActionVC.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
             if !completed {
-              print("not saved")
+              debugPrint("not saved")
                 return
             }
            self.save()
@@ -162,26 +152,29 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     }
     
     
+    func pickImage(sourceType: UIImagePickerController.SourceType){
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = sourceType
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func clickCancel(_ sender: Any) {
-        setUIElemnt()
+        memeImageView.image = nilImage
+        shareButton.isEnabled = false
+        prepareTextField(textField: topTextField, defaultText: "TOP")
+        prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
     }
     
     
     @IBAction func cameraClick(_ sender: Any) {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .camera
-        self.present(imagePickerController, animated: true, completion: nil)
+        pickImage(sourceType: .camera)
     }
     
     
     @IBAction func albumClick(_ sender: Any) {
-
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .photoLibrary
-        self.present(imagePickerController, animated: true, completion: nil)
-    
+        pickImage(sourceType: .photoLibrary)
     }
     
     
