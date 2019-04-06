@@ -62,7 +62,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-fw-cB5">
-                                <rect key="frame" x="152" y="64" width="71" height="44"/>
+                                <rect key="frame" x="10" y="64" width="355" height="44"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="37"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -71,8 +71,8 @@
                                     <action selector="topTextFieldBeginEdit:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="TpY-bl-XT6"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="37" translatesAutoresizingMaskIntoConstraints="NO" id="h3v-bb-Qsq" userLabel="Bottom Text Field">
-                                <rect key="frame" x="118.5" y="559" width="138" height="44"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="h3v-bb-Qsq" userLabel="Bottom Text Field">
+                                <rect key="frame" x="10" y="559" width="355" height="44"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="37"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -86,14 +86,18 @@
                         <constraints>
                             <constraint firstItem="BX4-E8-TaR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="5lm-BI-WuI"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ie-v8-gfq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jht-fw-cB5" secondAttribute="trailing" constant="10" id="9kv-2J-cIo"/>
                             <constraint firstItem="Jht-fw-cB5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GNo-7T-kCx"/>
                             <constraint firstItem="Qb8-zr-ff6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jkr-LP-lpl"/>
+                            <constraint firstItem="Jht-fw-cB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LXn-e2-GXG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BX4-E8-TaR" secondAttribute="bottom" constant="20" id="UmG-jy-v4P"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wxq-oG-cJN"/>
                             <constraint firstItem="BX4-E8-TaR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dwS-PK-nbx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h3v-bb-Qsq" secondAttribute="trailing" constant="10" id="g3K-N6-sXm"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nQo-Ww-NrC"/>
                             <constraint firstItem="h3v-bb-Qsq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oYE-8b-pZc"/>
                             <constraint firstItem="Qb8-zr-ff6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pKV-AQ-Fzc"/>
+                            <constraint firstItem="h3v-bb-Qsq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ry0-NM-3bz"/>
                             <constraint firstItem="xo0-qW-8Ex" firstAttribute="top" secondItem="h3v-bb-Qsq" secondAttribute="bottom" constant="20" id="tUD-0d-RLW"/>
                             <constraint firstItem="Jht-fw-cB5" firstAttribute="top" secondItem="Qb8-zr-ff6" secondAttribute="bottom" constant="20" id="u70-1m-ZHy"/>
                             <constraint firstItem="BX4-E8-TaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wR8-VF-Skb"/>

@@ -51,7 +51,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
+    
         subscribeToKeyboardNotifications()
         
         if memeImageView.image == nilImage {
@@ -112,8 +112,8 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     
     func prepareTextField(textField: UITextField, defaultText: String) {
         textField.text = defaultText
-        textField.textAlignment = .center
         textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
         textField.delegate = self
         
     }
